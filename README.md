@@ -1,5 +1,5 @@
 ## Apporatory
-This is an Angular that shows basic user details.
+This is an Angular App that shows basic sample user's information.
 
 ## Development server
 
