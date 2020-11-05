@@ -1,0 +1,37 @@
+<div class="container">
+<div class="card">
+    <div class="card-header text-center">
+        <h3>USER LIST</h3>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+                <th>Gender</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of UserList">
+                <td>{{item.FullName}}</td>
+                <td>{{item.Email}}</td>
+                <td>{{item.MobileNumber}}</td>
+                <td>{{item.Gender}}</td>
+                <td><Button class="btn btn-primary" (click)="CurrectUser = item">View</Button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+<div class="card" *ngIf="CurrectUser.id">
+    <div class="card-header text-center">
+        Single User Details
+    </div>
+    <div class="card-body" >
+        <app-child [item]="CurrectUser"></app-child>
+    </div>
+</div>
+</div>
